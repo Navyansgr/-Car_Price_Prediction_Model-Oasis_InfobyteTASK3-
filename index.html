@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <h1>Car Price Prediction Model</h1>
+    <form action="/predict" method="post">
+        Brand: <input type="text" name="brand" required><br>
+        Year: <input type="number" name="year" required><br>
+        Horsepower: <input type="number" name="horsepower" required><br>
+        Mileage: <input type="number" name="mileage" required><br>
+        <input type="submit" value="Predict Price">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
